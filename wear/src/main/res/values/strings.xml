@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string name="pg_overview">
+        Central Park of Culture and Rest Gorky in Kharkov is the best theme park in Ukraine,
+        one of the best in Europe. This is confirmed by a number of awards and positive feedback
+        from our visitors, including Tripadvisor users. The park consists of several thematic zones,
+        each decorated in its own style. The park has attractions for all ages - from children to extreme
+    </string>
+
+</resources>

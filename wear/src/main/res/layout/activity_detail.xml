@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.drawer.WearableDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            <android.support.wearable.view.GridViewPager-->
+            <!--                android:id="@+id/gridViewPager"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent" />-->
+
+            <!--            <android.support.wearable.view.DotsPageIndicator-->
+            <!--                android:id="@+id/dotsPageIndicator"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center_horizontal|bottom"-->
+            <!--                app:dotFadeWhenIdle="false" />-->
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.wear.widget.drawer.WearableDrawerView
+        android:id="@+id/bottom_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:foregroundGravity="bottom"
+        app:drawerContent="@+id/drawer_content"
+        app:peekView="@+id/peek_view">
+
+        <androidx.wear.widget.BoxInsetLayout
+            android:id="@+id/drawer_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="@dimen/dismiss_padding">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <android.support.wearable.view.CircularButton
+                        android:id="@+id/btn_close_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:color="@color/green"
+                        android:pointerIcon="arrow"
+                        android:layout_margin="12dp"
+                        android:src="@drawable/ic_cc_checkmark" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.wear.widget.BoxInsetLayout>
+
+        <LinearLayout
+            android:id="@+id/peek_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_place_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </androidx.wear.widget.drawer.WearableDrawerView>
+
+    <androidx.wear.widget.drawer.WearableNavigationDrawerView
+        android:id="@+id/top_navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        app:navigationStyle="multiPage" />
+
+</androidx.wear.widget.drawer.WearableDrawerLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.griddynamics.testwearapp.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_placeActivity"
+            app:destination="@id/placeActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeDetailFragment"
+        android:name="com.griddynamics.testwearapp.PlaceDetailFragment"
+        android:label="PlaceDetailFragment" />
+
+    <activity
+        android:id="@+id/placeActivity"
+        android:name="com.griddynamics.testwearapp.PlaceActivity"
+        android:label="PlaceActivity" />
+
+</navigation>
